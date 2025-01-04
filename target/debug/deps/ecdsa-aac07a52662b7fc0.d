@@ -1,0 +1,12 @@
+/home/davesoma/Rust/rsbtc/target/debug/deps/libecdsa-aac07a52662b7fc0.rmeta: /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/lib.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/normalized.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/recovery.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/der.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/hazmat.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/signing.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/verifying.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/../README.md
+
+/home/davesoma/Rust/rsbtc/target/debug/deps/ecdsa-aac07a52662b7fc0.d: /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/lib.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/normalized.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/recovery.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/der.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/hazmat.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/signing.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/verifying.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/../README.md
+
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/lib.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/normalized.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/recovery.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/der.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/hazmat.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/signing.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/verifying.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ecdsa-0.16.9/src/../README.md:
