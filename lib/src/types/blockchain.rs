@@ -195,9 +195,9 @@ impl Blockchain {
     pub fn add_block(&mut self, block: Block) -> Result<()> {
         //check if the block is valid
         if self.blocks.is_empty() {
-            //if this is the first blocl, check if the block's prev__block_hash is all zeroes
+            //if this is the first block, check if the block's prev__block_hash is all zeroes
             if block.header.previous_block_hash != Hash::zero() {
-                println!("zero has");
+                println!("zero hash");
                 return Err(BtcError::InvalidBlock);
             }
         } else {
@@ -303,6 +303,12 @@ impl Blockchain {
         };
         // if the new target is more than the minimu target, set it to the minimum target
         self.target = new_target.min(crate::MIN_TARGET);
+    }
+
+    pub fn calculate_block_reward(&self) -> u64 {
+        let block_height = self.block_height();
+        let halvings = block_height / crate::HALVING_INTERVAL;
+        (crate::INITIAL_REWARD * 10u64.pow(8)) >> halvings
     }
 }
 impl Saveable for Blockchain {

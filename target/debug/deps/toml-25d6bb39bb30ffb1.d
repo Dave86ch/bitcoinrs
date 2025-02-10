@@ -1,0 +1,13 @@
+/home/davesoma/Rust/rsbtc/target/debug/deps/libtoml-25d6bb39bb30ffb1.rmeta: /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/lib.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/map.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/value.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/de.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/ser.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/macros.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/edit.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/fmt.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/table.rs
+
+/home/davesoma/Rust/rsbtc/target/debug/deps/toml-25d6bb39bb30ffb1.d: /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/lib.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/map.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/value.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/de.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/ser.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/macros.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/edit.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/fmt.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/table.rs
+
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/lib.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/map.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/value.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/de.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/ser.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/macros.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/edit.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/fmt.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/toml-0.8.20/src/table.rs:

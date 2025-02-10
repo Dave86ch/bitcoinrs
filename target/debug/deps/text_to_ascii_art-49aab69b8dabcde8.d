@@ -1,0 +1,9 @@
+/home/davesoma/Rust/rsbtc/target/debug/deps/libtext_to_ascii_art-49aab69b8dabcde8.rmeta: /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/lib.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts/default_font.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts/small.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts/standard.rs
+
+/home/davesoma/Rust/rsbtc/target/debug/deps/text_to_ascii_art-49aab69b8dabcde8.d: /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/lib.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts/default_font.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts/small.rs /home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts/standard.rs
+
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/lib.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts/default_font.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts/small.rs:
+/home/davesoma/.cargo/registry/src/index.crates.io-6f17d22bba15001f/text-to-ascii-art-0.1.10/src/fonts/standard.rs:
