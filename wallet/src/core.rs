@@ -3,14 +3,19 @@ use btclib::crypto::{PrivateKey, PublicKey};
 use btclib::types::{Transaction, TransactionOutput};
 use btclib::util::Saveable;
 use crossbeam_skiplist::SkipMap;
-use kanal::AsyncSender;
+use kanal::Sender;
 use serde::{Deserialize, Serialize};
 use std::fs;
 use std::path::PathBuf;
-use std::sync::Arc;
+use std::sync::{Arc, Mutex};
 use tokio::net::TcpStream;
+use tracing::*;
+
 #[derive(Serialize, Deserialize, Clone)]
-pub struct Key {}
+pub struct Key {
+    pub public: PathBuf,
+    pub private: PathBuf,
+}
 #[derive(Clone)]
 struct LoadedKey {
     public: PublicKey,
@@ -72,34 +77,42 @@ impl UtxoStore {
 pub struct Core {
     pub config: Config,
     utxos: UtxoStore,
+    pub tx_sender: Sender<Transaction>,
+    pub stream: Mutex<TcpStream>,
     pub tx_sender: AsyncSender<Transaction>,
 }
 impl Core {
-    fn new(config: Config, utxos: UtxoStore) -> Self {
+    fn new(config: Config, utxos: UtxoStore, stream: TcpStream) -> Self {
         let (tx_sender, _) = kanal::bounded(10);
         Core {
             config,
             utxos,
-            tx_sender: tx_sender.clone_async(),
+            tx_sender,
+            stream: Mutex::new(stream),
         }
     }
-    pub fn load(config_path: PathBuf) -> Result<Self> {
+    pub async fn load(config_path: PathBuf) -> Result<Self> {
         let config: Config = toml::from_str(&fs::read_to_string(&config_path)?)?;
         let mut utxos = UtxoStore::new();
+        let stream = TcpStream::connect(&config.default_node).await?;
         // Load keys from config
         for key in &config.my_keys {
             let public = PublicKey::load_from_file(&key.public)?;
             let private = PirvateKey::load_from_file(&key.private)?;
             utxos.add_key(LoadedKey { public, private });
         }
-        Ok(Core::new(config, utxos))
+        Ok(Core::new(config, utxos, stream))
     }
+    // Fetch UTXOs from the node for all loaded keys
     pub async fn fetch_utxos(&self) -> Result<()> {
+        debug!("Fetching UTXOs from node {}", self.config.default_node);
         let mut stream = TcpStream::connect(&self.config.default_node).await?;
         for key in &self.utxos.my_keys {
             let message = Message::FetchUTXOs(key.public.clone());
-            message.send_async(&mut stream).await?;
-            if let Message::UTXOs(utxos) = Message::receive_async(&mut stream).await? {
+            message.send_async(&mut *self.stream.lock().await).await?;
+            if let Message::UTXOs(utxos) =
+                Message::receive_async(&mut *self.stream.lock().await).await?
+            {
                 // Replace the entire UTXO set for this key
                 self.utxos.utxos.insert(
                     key.public.clone(),
@@ -112,12 +125,29 @@ impl Core {
                 return Err(anyhow::anyhow!("Unexpected response from node"));
             }
         }
-        Ok(Core::new(COnfig, utxos))
+        Ok(Core::new(config, utxos, stream))
     }
     pub async fn send_transaction(&self, transaction: Transaction) -> Result<()> {
         let mut stream = TcpStream::connect(&self.config.default_node).await?;
         let message = Message::SubmitTransaction(transaction);
-        message.send_async(&mut stream).await?;
+        message.send_async(&mut *self.stream.lock().await).await?;
+        info!("Transaction sent successfully");
+        Ok(())
+    }
+
+    pub fn send_transaction_async(&self, recipient: &str, amount: u64) -> Result<()> {
+        info!("Preparing to send {} satoshi to {}", amount, recipient);
+        let recipient_key = self
+            .config
+            .contacts
+            .iter()
+            .find(|r| r.name == recipient)
+            .ok_or_else(|| anyhow::anyhow!("Recipient not found"))?
+            .load()?
+            .key;
+        let transaction = self.create_transaction(&recipient_key, amount)?;
+        debug!("Sending transaction asynchronously");
+        self.tx_sender.send(transaction)?;
         Ok(())
     }
 
